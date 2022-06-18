@@ -11,7 +11,9 @@ namespace AddressBookADO
         ExceptionType exceptionType;
         public enum ExceptionType
         {
-            CONNECTION_FAILED, CONTACT_NOT_FOUND
+            CONNECTION_FAILED,
+            CONTACT_NOT_FOUND,
+            INSERTION_ERROR,
         }
         public AddressException(ExceptionType exceptionType, string message) : base(message)
         {
