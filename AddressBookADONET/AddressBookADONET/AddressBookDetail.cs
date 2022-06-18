@@ -49,7 +49,7 @@ namespace AddressBookADO
                 using (connection)
                 {
                     connection.Open();
-                    SqlCommand command = new SqlCommand("Add_Details", connection)
+                    SqlCommand command = new SqlCommand("AddressBookInsert", connection)
                     {
                         CommandType = CommandType.StoredProcedure
                     };
