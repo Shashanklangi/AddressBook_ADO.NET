@@ -41,5 +41,24 @@ namespace AddressBookTest
             var result = addressBookDetail.RetrieveAddressBookDetails();
             Assert.AreEqual(expected, result.Count);
         }
+        //<summary>
+        //TC 4 : Update Details
+        //</summary>
+        [Test]
+        public void UpdatingEmployeeDetails()
+        {
+            bool expected = true;
+            address.ID = 4;
+            address.FirstName = "John";
+            address.LastName = "Rambo";
+            address.Address = "Bill Street";
+            address.City = "Texas";
+            address.State = "Florida";
+            address.Zip = 123652;
+            address.PhoneNumber = 4563256321;
+            address.Email = "rambojihn@gmail.com";
+            bool result = addressBookDetail.UpdateDetails(address);
+            Assert.AreEqual(expected, result);
+        }
     }
 }
